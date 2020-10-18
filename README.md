@@ -1,2 +1,3 @@
 # kickstart-javascript
-Simple web projects built with HTML, CSS and JavaScript
+
+These are the web projects built with plain HTML, CSS and JavaScript. No libraries, compilers or frameworks were used.

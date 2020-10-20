@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>Form Validator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create an account</h1>
+      <form>
+        <div class="form-control">
+          <small>First name error</small>
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="First name"
+          />
+        </div>
+        <div class="form-control">
+          <small>Last name error</small>
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Last name"
+          />
+        </div>
+        <div class="form-control">
+          <small>Email error</small>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email address"
+          />
+        </div>
+        <div class="form-control">
+          <small>Password error</small>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create password"
+          />
+          <div class="hint">Password must be at least 6 characters long.</div>
+        </div>
+        <button type="button">Submit</button>
+      </form>
+    </div>
+    <script src="./assets/scripts/script.js"></script>
+  </body>
+</html>

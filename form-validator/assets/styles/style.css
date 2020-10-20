@@ -1,0 +1,118 @@
+:root {
+  --body-bg-color: #f0f2f4;
+  --container-bg-color: #fff;
+  --hint-color: #646464;
+  --border-color: #a8a8a8;
+  --border-focus-color: #041018;
+  --error-color: #f81414;
+  --button-bg-color: #10c010;
+  --button-bg-hover-color: #1aa414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  font-family: "Catamaran", sans-serif;
+  background-color: var(--body-bg-color);
+}
+
+.container {
+  background-color: var(--container-bg-color);
+  width: 40rem;
+  padding: 1rem 4rem;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.26);
+}
+
+form {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.form-control {
+  margin: 0 0 0.6rem;
+}
+
+small {
+  font: inherit;
+  color: var(--error-color);
+  visibility: hidden;
+}
+
+input {
+  display: block;
+  font: inherit;
+  width: 100%;
+  padding: 0.4rem 0.8rem;
+  border: 1px var(--border-color) solid;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+input:focus {
+  border-color: var(--border-focus-color);
+}
+
+.hint {
+  font-size: 85%;
+  color: var(--hint-color);
+}
+
+button {
+  display: block;
+  font: inherit;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0.4rem;
+  margin: 2rem 0;
+  width: 100%;
+  border: 1px #fff solid;
+  border-radius: 4px;
+  background-color: var(--button-bg-color);
+  color: var(--border-focus-color);
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover,
+button:active {
+  background-color: var(--button-bg-hover-color);
+}
+
+@media (max-width: 500px) {
+  body {
+    background-color: #fff;
+  }
+
+  .container {
+    width: 100%;
+    box-shadow: none;
+    padding: 1rem 2rem;
+  }
+}

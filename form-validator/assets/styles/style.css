@@ -111,8 +111,7 @@ button:active {
   }
 
   .container {
-    width: 100%;
-    box-shadow: none;
+    width: 90%;
     padding: 1rem 2rem;
   }
 }

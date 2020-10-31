@@ -23,7 +23,7 @@ html {
 body {
   display: flex;
   height: 100%;
-  font-family: "Catamaran", sans-serif;
+  font-family: 'Catamaran', sans-serif;
   background-color: var(--body-bg-color);
 }
 
@@ -113,10 +113,6 @@ button {
 }
 
 @media (max-width: 500px) {
-  body {
-    background-color: #fff;
-  }
-
   .container {
     width: 90%;
     padding: 1rem 2rem;

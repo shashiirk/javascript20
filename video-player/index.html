@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Video Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <video id="video" class="screen" src="assets/video/happy3.mp4"></video>
+      <div class="controls">
+        <div class="bar">
+          <input
+            class="slider"
+            type="range"
+            id="progress"
+            min="0"
+            max="100"
+            value="0"
+            step="0.1"
+          />
+        </div>
+        <div class="icons">
+          <i id="play" class="icon fas fa-play"></i>
+          <span id="timerBar"><span id="timer">00:00</span> &sol; 00:54</span>
+          <i id="expand" class="icon fas fa-expand"></i>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>

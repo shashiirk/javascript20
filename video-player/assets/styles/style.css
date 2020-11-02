@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  height: 100%;
+}
+
+.screen {
+  display: block;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.container {
+  margin: 2rem auto;
+  position: relative;
+  width: 70rem;
+  height: fit-content;
+}
+
+.container.fullscreen {
+  width: 95%;
+  height: fit-content;
+  margin: auto;
+}
+
+.controls {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.bar {
+  height: 4rem;
+  width: 100%;
+  padding: 0 1.4rem;
+  display: flex;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 1.2rem;
+}
+
+.icon {
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  transition: background 200ms ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#play {
+  margin-right: 1rem;
+}
+
+#expand {
+  margin-left: auto;
+}
+
+#timerBar {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.4rem;
+}
+
+.slider {
+  display: block;
+  margin: 1rem 0;
+  width: 100%;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.slider::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.6rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5rem;
+  border: 0;
+}
+
+.slider::-moz-range-track {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.4rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5rem;
+  border: 0;
+}
+
+.slider::-webkit-slider-thumb {
+  box-shadow: none;
+  border: 0;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -0.5rem;
+}
+
+.slider::-moz-range-thumb {
+  box-shadow: none;
+  border: 0;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -0.5rem;
+}
+
+.slider::-moz-focus-outer {
+  border: 0;
+}
+
+@media (hover: hover) {
+  .icon:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+  }
+}
+
+.icon:active {
+  transition-duration: 0ms;
+  background-color: rgba(255, 255, 255, 0.32);
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+@media (orientation: landscape) and (hover: none) {
+  .container {
+    margin: auto;
+    width: 85%;
+  }
+
+  .container.fullscreen {
+    margin: auto;
+    width: 85%;
+  }
+}

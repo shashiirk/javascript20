@@ -180,10 +180,3 @@ body {
     width: 90%;
   }
 }
-
-@media (orientation: landscape) and (hover: none) {
-  .container {
-    margin: auto;
-    width: 85%;
-  }
-}

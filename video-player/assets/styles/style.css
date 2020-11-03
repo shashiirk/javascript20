@@ -12,6 +12,20 @@ html {
 body {
   display: flex;
   height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  margin: 2rem auto;
+  width: 70rem;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: 600;
+  padding: 2rem;
+  text-align: center;
+  color: #0a2244;
 }
 
 .screen {
@@ -20,21 +34,16 @@ body {
   background: rgba(0, 0, 0, 0.75);
 }
 
-.container {
-  margin: 2rem auto;
+.video-box {
   position: relative;
-  width: 70rem;
-  height: fit-content;
 }
 
-.container.fullscreen {
-  width: 95%;
-  height: fit-content;
-  margin: auto;
+.screen::-webkit-media-controls {
+  display: none !important;
 }
 
 .controls {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -43,6 +52,11 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+.controls.hide {
+  transition: opacity 500ms linear;
+  opacity: 0;
 }
 
 .bar {
@@ -77,8 +91,13 @@ body {
 }
 
 #timerBar {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: inline-block;
   font-size: 1.4rem;
+}
+
+#timer {
+  display: inline-block;
+  width: 4rem;
 }
 
 .slider {
@@ -164,11 +183,6 @@ body {
 
 @media (orientation: landscape) and (hover: none) {
   .container {
-    margin: auto;
-    width: 85%;
-  }
-
-  .container.fullscreen {
     margin: auto;
     width: 85%;
   }

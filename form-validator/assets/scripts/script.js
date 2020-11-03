@@ -126,4 +126,3 @@ function validateFormHandler() {
 }
 
 submitBtn.addEventListener('click', validateFormHandler);
-const regex = /^[A-Za-z]+$/;

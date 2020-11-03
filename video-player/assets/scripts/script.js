@@ -5,12 +5,30 @@ const progress = document.getElementById('progress');
 const timerBar = document.getElementById('timerBar');
 const timer = document.getElementById('timer');
 const container = document.querySelector('.container');
+const videoBox = document.querySelector('.video-box');
+const controls = document.querySelector('.controls');
 
 function playPauseMedia() {
   if (video.paused) {
     video.play();
+    setTimeout(function () {
+      controls.classList.add('hide');
+    }, 500);
   } else {
     video.pause();
+    controls.classList.remove('hide');
+  }
+}
+
+function toggleControlVisibility(ev) {
+  if (ev.type === 'mouseenter') {
+    controls.classList.remove('hide');
+  } else {
+    if (!video.paused) {
+      setTimeout(function () {
+        controls.classList.add('hide');
+      }, 500);
+    }
   }
 }
 
@@ -48,16 +66,17 @@ function resetVideo() {
 
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
+    videoBox.requestFullscreen();
     expand.classList.remove('fa-expand');
     expand.classList.add('fa-compress');
-    container.classList.add('fullscreen');
+    document.querySelector('.heading').style.display = 'none';
+    controls.classList.remove('hide');
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();
       expand.classList.remove('fa-compress');
       expand.classList.add('fa-expand');
-      container.classList.remove('fullscreen');
+      document.querySelector('.heading').style.display = 'block';
     }
   }
 }
@@ -71,3 +90,5 @@ play.addEventListener('click', playPauseMedia);
 progress.addEventListener('click', setVideoProgress);
 progress.addEventListener('change', setVideoProgress);
 expand.addEventListener('click', toggleFullScreen);
+controls.addEventListener('mouseenter', toggleControlVisibility);
+controls.addEventListener('mouseleave', toggleControlVisibility);

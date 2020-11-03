@@ -1,6 +1,6 @@
 # Video Player
 
-Video player built using **HTMLMediaElement API** and custom design.
+Video player built using **HTMLVideoElement** API and custom design.
 
 ## Project Specifications
 

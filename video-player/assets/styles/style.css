@@ -25,7 +25,8 @@ body {
   font-weight: 600;
   padding: 2rem;
   text-align: center;
-  color: #0a2244;
+  color: #0e2f44;
+  text-shadow: 2px 2px #66cccc;
 }
 
 .screen {

@@ -13,11 +13,13 @@ const passwordErrorMsg1 = 'Please enter a password';
 const passwordErrorMsg2 = 'Passwords must contain at least 6 characters';
 let firstValidation = true;
 
+// Test for a valid name
 function regexTest(str) {
   const pattern = /^[A-Za-z]+$/;
   return pattern.test(str);
 }
 
+// Validate first name
 function validateFirstName() {
   const firstNameValue = firstName.value.trim();
   const firstNamePrevious = firstName.previousElementSibling;
@@ -36,11 +38,13 @@ function validateFirstName() {
     }
   }
 
+  // Event listener on input event
   if (firstValidation) {
     firstName.addEventListener('input', validateFirstName);
   }
 }
 
+// Validate last name
 function validateLastName() {
   const lastNameValue = lastName.value.trim();
   const lastNamePrevious = lastName.previousElementSibling;
@@ -59,17 +63,20 @@ function validateLastName() {
     }
   }
 
+  // Event listener on input event
   if (firstValidation) {
     lastName.addEventListener('input', validateLastName);
   }
 }
 
+// Test for a valid email format
 function checkEmailFormat(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   return re.test(String(email).toLowerCase());
 }
 
+// Validate email address
 function validateEmail() {
   const emailValue = email.value.trim();
   const emailPrevious = email.previousElementSibling;
@@ -88,11 +95,13 @@ function validateEmail() {
     }
   }
 
+  // Event listener on input event
   if (firstValidation) {
     email.addEventListener('input', validateEmail);
   }
 }
 
+// Validate password
 function validatePassword() {
   const passwordValue = password.value.trim();
   const passwordPrevious = password.previousElementSibling;
@@ -112,11 +121,13 @@ function validatePassword() {
     passwordParent.classList.remove('error');
   }
 
+  // Event listener on input event
   if (firstValidation) {
     password.addEventListener('input', validatePassword);
   }
 }
 
+// Validate all input fields
 function validateFormHandler() {
   validateFirstName();
   validateLastName();

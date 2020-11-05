@@ -8,6 +8,7 @@ const container = document.querySelector('.container');
 const videoBox = document.querySelector('.video-box');
 const controls = document.querySelector('.controls');
 
+// Play and pause video
 function playPauseMedia() {
   if (video.paused) {
     video.play();
@@ -20,6 +21,7 @@ function playPauseMedia() {
   }
 }
 
+// Toggle the visibility of control section accordingly
 function toggleControlVisibility(ev) {
   if (ev.type === 'mouseenter') {
     controls.classList.remove('hide');
@@ -32,6 +34,7 @@ function toggleControlVisibility(ev) {
   }
 }
 
+// Update play and pause icon according to current video state
 function updatePlayPauseIcon() {
   if (video.paused) {
     play.classList.remove('fa-pause');
@@ -42,6 +45,7 @@ function updatePlayPauseIcon() {
   }
 }
 
+// Update progress bar and timer
 function updateVideoProgress() {
   progress.value = (video.currentTime / video.duration) * 100;
 
@@ -56,14 +60,17 @@ function updateVideoProgress() {
   timer.textContent = `${minutes}:${seconds}`;
 }
 
+// Progress video on change in progress bar
 function setVideoProgress() {
   video.currentTime = (progress.value * video.duration) / 100;
 }
 
+// Reset video to initial state
 function resetVideo() {
   video.currentTime = 0;
 }
 
+// Toggle full screen
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
     videoBox.requestFullscreen();
@@ -81,14 +88,23 @@ function toggleFullScreen() {
   }
 }
 
+// Event listeners for video element
 video.addEventListener('click', playPauseMedia);
 video.addEventListener('play', updatePlayPauseIcon);
 video.addEventListener('pause', updatePlayPauseIcon);
 video.addEventListener('timeupdate', updateVideoProgress);
 video.addEventListener('ended', resetVideo);
+
+// Event listener for play icon
 play.addEventListener('click', playPauseMedia);
+
+// Event listeners for progress bar
 progress.addEventListener('click', setVideoProgress);
 progress.addEventListener('change', setVideoProgress);
+
+// Event listener for expand icon
 expand.addEventListener('click', toggleFullScreen);
+
+// Event listeners for controls element
 controls.addEventListener('mouseenter', toggleControlVisibility);
 controls.addEventListener('mouseleave', toggleControlVisibility);

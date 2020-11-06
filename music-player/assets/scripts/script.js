@@ -86,7 +86,7 @@ function resetProgress() {
   timer.textContent = '0:00';
 }
 
-// Go to next song
+// Go to previous song
 function gotoPreviousSong() {
   if (songIndex === 0) {
     songIndex = songs.length - 1;
@@ -102,7 +102,7 @@ function gotoPreviousSong() {
   }
 }
 
-// Go to previous song
+// Go to next song
 function gotoNextSong(playImmediately) {
   if (songIndex === songs.length - 1) {
     songIndex = 0;

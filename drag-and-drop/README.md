@@ -1,6 +1,6 @@
 # Drag and Drop
 
-Built with **HTML Drag and Drop** API, a scrambled list items that can be sorted by drag and drop.
+A scrambled list items that can be sorted by drag and drop. Built with **HTML Drag and Drop** API
 
 ## Project Specifications
 

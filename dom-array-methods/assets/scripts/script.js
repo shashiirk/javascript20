@@ -18,7 +18,6 @@ function getUser() {
         name: `${userData.name.first} ${userData.name.last}`,
         wealth: Math.floor(Math.random() * 1000000),
       };
-
       pushUser(user);
     })
     .catch((error) => {
@@ -29,7 +28,6 @@ function getUser() {
 // Push user to users array
 function pushUser(user) {
   users.push(user);
-
   showUsers();
 }
 
@@ -52,7 +50,6 @@ function doubleMoneyHandler() {
 // Show only millionaires among all users
 function showMillionairesHandler() {
   users = users.filter((user) => user.wealth >= 1000000);
-
   showUsers();
 }
 

@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  border: 1px green solid;
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  background-color: #e8e8e8;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 80rem;
+  width: 100%;
+  padding: 1rem;
+  margin: auto;
+}
+
+.container h1 {
+  font-size: 3.4rem;
+  text-align: center;
+  padding: 1rem 0.2rem;
+  margin: 1rem 0 5rem;
+  background-color: #f05454;
+  color: white;
+}
+
+.container .box {
+  display: flex;
+}
+
+.box aside {
+  width: 30%;
+  padding: 4rem 2rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.box aside button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.8rem;
+  margin-top: 2rem;
+  background-color: #30475e;
+  color: #fff;
+  border: none;
+  outline: none;
+  transition: background 200ms ease-in-out;
+}
+
+@media (hover: hover) {
+  .box aside button:hover {
+    background-color: #16212c;
+  }
+}
+
+.box main {
+  width: 70%;
+  padding: 0 2rem;
+  border-left: 1px #8a8a8a solid;
+}
+
+.box main .title {
+  color: #3a3d3a;
+  padding: 0 1rem 0.8rem;
+  font-size: 2.4rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px #8a8a8a solid;
+}
+
+.box main .title h2 {
+  font: inherit;
+}
+
+.box main #items {
+  padding-top: 2rem;
+}
+
+.box main #items .user {
+  color: #3a3d3a;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box main #items .user h3,
+.box main #items .total h3 {
+  font: inherit;
+}
+
+.box main #items .total {
+  border-top: 1px #949494 dotted;
+  color: #3a3d3a;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding: 1rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .container h1 {
+    margin-bottom: 0;
+  }
+
+  .container .box {
+    flex-direction: column;
+  }
+
+  .box aside {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .box main {
+    border-left: none;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .box main .title {
+    border-top: 1px #8a8a8a solid;
+    padding: 1rem 0;
+  }
+}

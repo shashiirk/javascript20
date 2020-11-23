@@ -15,51 +15,60 @@ let rates = {};
 
 // Fetch the latest currency rates
 async function fetchRates() {
-  const response = await fetch('https://open.exchangerate-api.com/v6/latest');
-  const data = await response.json();
-  rates = data.rates;
+  try {
+    const response = await fetch('https://open.exchangerate-api.com/v6/latest');
+    const data = await response.json();
+    rates = data.rates;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 // Perform conversions and update DOM
 async function convertCurrency(ev) {
-  await fetchRates();
+  try {
+    await fetchRates();
 
-  firstCurrencyValue = parseInt(firstCurrencyInput.value);
-  secondCurrencyValue = parseInt(secondCurrencyInput.value);
-  targetElement = ev.target.id;
+    firstCurrencyValue = parseInt(firstCurrencyInput.value);
+    secondCurrencyValue = parseInt(secondCurrencyInput.value);
+    targetElement = ev.target.id;
 
-  // Swap currencies if same types were selected
-  if (firstSelect.value === secondSelect.value) {
-    if (targetElement === 'first-select') {
-      secondSelect.value = firstCurrencyType;
-    } else {
-      firstSelect.value = secondCurrencyType;
+    // Swap currencies if same types were selected
+    if (firstSelect.value === secondSelect.value) {
+      if (targetElement === 'first-select') {
+        secondSelect.value = firstCurrencyType;
+      } else {
+        firstSelect.value = secondCurrencyType;
+      }
     }
-  }
 
-  firstCurrencyType = firstSelect.value;
-  secondCurrencyType = secondSelect.value;
+    firstCurrencyType = firstSelect.value;
+    secondCurrencyType = secondSelect.value;
 
-  if (
-    (targetElement === 'first-currency' && !isNaN(firstCurrencyValue)) ||
-    ((targetElement === 'first-select' || targetElement === 'second-select') &&
-      !isNaN(firstCurrencyValue))
-  ) {
-    unitConversionRate = rates[secondCurrencyType] / rates[firstCurrencyType];
-    secondCurrencyInput.value = (
-      firstCurrencyValue * unitConversionRate
-    ).toFixed(2);
-  } else if (
-    targetElement === 'second-currency' &&
-    !isNaN(secondCurrencyValue)
-  ) {
-    unitConversionRate = rates[firstCurrencyType] / rates[secondCurrencyType];
-    firstCurrencyInput.value = (
-      secondCurrencyValue * unitConversionRate
-    ).toFixed(2);
-  } else {
-    firstCurrencyInput.value = '';
-    secondCurrencyInput.value = '';
+    if (
+      (targetElement === 'first-currency' && !isNaN(firstCurrencyValue)) ||
+      ((targetElement === 'first-select' ||
+        targetElement === 'second-select') &&
+        !isNaN(firstCurrencyValue))
+    ) {
+      unitConversionRate = rates[secondCurrencyType] / rates[firstCurrencyType];
+      secondCurrencyInput.value = (
+        firstCurrencyValue * unitConversionRate
+      ).toFixed(2);
+    } else if (
+      targetElement === 'second-currency' &&
+      !isNaN(secondCurrencyValue)
+    ) {
+      unitConversionRate = rates[firstCurrencyType] / rates[secondCurrencyType];
+      firstCurrencyInput.value = (
+        secondCurrencyValue * unitConversionRate
+      ).toFixed(2);
+    } else {
+      firstCurrencyInput.value = '';
+      secondCurrencyInput.value = '';
+    }
+  } catch (error) {
+    console.log(error);
   }
 }
 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav">
+        <h1 class="title">
+          podcorn <i id="icon" class="icon fas fa-bars fa-3x"></i>
+        </h1>
+        <div class="links">
+          <a href="#">Podcaster</a>
+          <a href="#">Brands</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div class="nav-btns">
+          <button id="nav-btn-1" class="nav-btn-1" type="button">
+            Sign Up
+          </button>
+          <button class="nav-btn-2" type="button">Login</button>
+        </div>
+      </nav>
+      <main class="main">
+        <div class="content">
+          <p>Marketplace for Podcast Sponsorships</p>
+          <h1>Connecting unique voices to unique brands.</h1>
+          <div class="main-btns">
+            <button class="main-btn-1" type="button">For Podcasts</button>
+            <button class="main-btn-2" type="button">For Brands</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="assets/images/hero.svg" alt="person" />
+        </div>
+      </main>
+      <div id="backdrop"></div>
+      <section class="signup-section" id="signup-section">
+        <h1 class="title">Sign up now</h1>
+        <form action="#" class="signup-form">
+          <input
+            type="text"
+            name="fullname"
+            id="fullname"
+            placeholder="Full Name"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email address"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+            placeholder="Confirm password"
+          />
+          <button type="submit" id="signup-btn">Submit</button>
+        </form>
+      </section>
+    </div>
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>

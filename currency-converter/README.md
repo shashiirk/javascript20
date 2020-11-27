@@ -1,6 +1,6 @@
 # Currency Converter
 
-An application that converts currency among countries built using **fetch** API
+An application that converts currency among countries built using **fetch** API.
 
 ## Project Specifications
 

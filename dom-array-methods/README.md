@@ -1,6 +1,6 @@
 # DOM Array Methods
 
-Simple project that uses higher order array methods, **fetch** API and DOM manipulation
+Simple project that uses higher order array methods, **fetch** API and DOM manipulation.
 
 ## Project Specifications
 

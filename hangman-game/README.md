@@ -1,6 +1,6 @@
 # Hangman Game
 
-Find the word by selecting a letter each time. You win if you find the word in certain amount of chances
+Find the word by selecting a letter each time. You win if you find the word in certain amount of chances.
 
 # Project Specifications
 

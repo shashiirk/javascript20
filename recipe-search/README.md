@@ -8,4 +8,4 @@ Application that can be used to search recipes built using **fetch** API.
 - Connect to [themealdb](https://www.themealdb.com/api.php) API and fetch results
 - Display a list of recipes whose title matches the search term
 - Click on the recipe to get more details
-- Watch recipe preparation video in Youtube
+- Watch preparation video in Youtube

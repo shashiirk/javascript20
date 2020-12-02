@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Recipe Search</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <h1 class="title">Recipe Search</h1>
+        <div class="search-bar-container">
+          <div class="search-bar">
+            <form id="form" class="form">
+              <input
+                type="text"
+                id="search-input"
+                class="search-input"
+                class="search-input"
+                placeholder="Search recipes"
+              />
+              <button id="submit-btn" class="submit-btn" type="submit">
+                <i id="search-icon" class="search-icon fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <h2 class="no-result" id="no-result"></h2>
+        <div class="items" id="items"></div>
+      </div>
+      <div id="recipe-backdrop" class="recipe-backdrop">
+        <div class="recipe" id="recipe">
+          <i id="cross-icon" class="cross-icon fas fa-times"></i>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>

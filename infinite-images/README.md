@@ -1,6 +1,6 @@
 # Infinite Images
 
-Fetch and display images with infinite scroll functionality.
+Fetch and display images using **fetch** API with added functionality for infinite scroll.
 
 ## Project Specifications
 

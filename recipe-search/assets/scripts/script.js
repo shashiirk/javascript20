@@ -5,7 +5,6 @@ const items = document.getElementById('items');
 const recipeBackdrop = document.getElementById('recipe-backdrop');
 const recipe = document.getElementById('recipe');
 const crossIcon = document.getElementById('cross-icon');
-
 // Stores recipe details in an array
 const recipeItems = [];
 

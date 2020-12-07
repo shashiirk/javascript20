@@ -34,13 +34,10 @@ const wordList = [
 
 // Word that is selected to play
 let selectedWord = null;
-
 // Stores the count of no.of incorrectly typed letters
 let incorrectCount = 0;
-
 // Correct letters typed by the player
 const correctLetters = [];
-
 // Incorrect letters typed by the player
 const incorrectLetters = [];
 

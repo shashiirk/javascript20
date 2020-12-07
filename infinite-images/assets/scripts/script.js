@@ -1,12 +1,9 @@
 const images = document.getElementById('images');
 const loader = document.getElementById('loader');
-
 // No.of images per page
 const limitValue = 5;
-
 // Current Page Number
 let pageValue = 0;
-
 // Scrolled to bottom before or not
 let scrolledToBottomBefore = false;
 

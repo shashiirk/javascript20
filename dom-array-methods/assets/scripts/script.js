@@ -4,7 +4,6 @@ const showMillionairesBtn = document.getElementById('show-millionaires-btn');
 const sortUsersBtn = document.getElementById('sort-users-btn');
 const calculateTotalBtn = document.getElementById('calculate-total-btn');
 const items = document.getElementById('items');
-
 // Array to store users
 let users = [];
 
@@ -102,4 +101,5 @@ showMillionairesBtn.addEventListener('click', showMillionairesHandler);
 sortUsersBtn.addEventListener('click', sortUsersHandler);
 calculateTotalBtn.addEventListener('click', calculateTotalHandler);
 
+// On load
 getStarted();

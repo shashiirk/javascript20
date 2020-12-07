@@ -17,7 +17,6 @@ const richestPeople = [
 
 // Array to store list items
 const listItems = [];
-
 // Store the index of dragging item
 let dragStartIndex;
 
@@ -111,4 +110,5 @@ function checkOrder() {
   });
 }
 
+// Listen to click event on checkBtn
 checkBtn.addEventListener('click', checkOrder);

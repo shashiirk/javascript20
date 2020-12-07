@@ -9,7 +9,6 @@ let firstCurrencyType = firstSelect.value;
 let secondCurrencyType = secondSelect.value;
 let targetElement;
 let unitConversionRate;
-
 // Object to store latest currency rates
 let rates = {};
 

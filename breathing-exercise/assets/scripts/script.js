@@ -32,7 +32,7 @@ function breathe() {
   }, holdTime);
 }
 
-// Breathe on load
+// Breathe initially
 breathe();
 // Call breathe() periodically
 setInterval(breathe, totalTime);

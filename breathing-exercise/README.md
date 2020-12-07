@@ -5,5 +5,5 @@ Application that directs you when to breathe in and breathe out built using **CS
 ## Project Specifications
 
 - Circle with gradient color
-- Expand and Compress the circle periodically
+- Expand and compress the circle periodically
 - Display message

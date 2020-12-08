@@ -239,10 +239,10 @@ body.no-scroll {
   display: block;
   width: fit-content;
   text-decoration: none;
-  font-size: 1.6rem;
-  padding: 1rem 1.4rem;
+  font-size: 1.4rem;
+  padding: 1.4rem 2rem;
   margin: 3rem auto 5rem;
-  border-radius: 20px;
+  border-radius: 40px;
   transition: opacity 200ms ease-in;
 }
 

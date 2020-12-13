@@ -1,0 +1,176 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #001122;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.clock {
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock::after {
+  content: '';
+  height: 24px;
+  width: 24px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.points {
+  position: relative;
+  width: 95%;
+  height: 95%;
+}
+
+.point {
+  --rotation: 0deg;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: rotate(var(--rotation));
+}
+
+.point::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 2px;
+  background-color: white;
+  top: 0%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%);
+}
+
+.point1 {
+  --rotation: 0deg;
+}
+
+.point2 {
+  --rotation: 30deg;
+}
+
+.point3 {
+  --rotation: 60deg;
+}
+
+.point4 {
+  --rotation: 90deg;
+}
+
+.point5 {
+  --rotation: 120deg;
+}
+
+.point6 {
+  --rotation: 150deg;
+}
+
+.point7 {
+  --rotation: 180deg;
+}
+
+.point8 {
+  --rotation: 210deg;
+}
+
+.point9 {
+  --rotation: 240deg;
+}
+
+.point10 {
+  --rotation: 270deg;
+}
+
+.point11 {
+  --rotation: 300deg;
+}
+
+.point12 {
+  --rotation: 330deg;
+}
+
+.hand {
+  --rotation: 0deg;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom;
+  transform: translate(-50%) rotate(var(--rotation));
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.hour {
+  height: 30%;
+  width: 8px;
+  background-color: #d82650;
+}
+
+.minute {
+  height: 35%;
+  width: 6px;
+  background-color: white;
+}
+
+.second {
+  height: 40%;
+  width: 4px;
+  background-color: #00a8cc;
+}
+
+@media (max-width: 600px) {
+  .clock {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .clock {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  .clock {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 300px) {
+  .clock {
+    height: 250px;
+    width: 250px;
+  }
+}

@@ -149,28 +149,28 @@ body {
 
 @media (max-width: 600px) {
   .clock {
-    height: 400px;
-    width: 400px;
+    height: 375px;
+    width: 375px;
   }
 }
 
 @media (max-width: 500px) {
-  .clock {
-    height: 350px;
-    width: 350px;
-  }
-}
-
-@media (max-width: 400px) {
   .clock {
     height: 300px;
     width: 300px;
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 400px) {
   .clock {
     height: 250px;
     width: 250px;
+  }
+}
+
+@media (max-width: 300px) {
+  .clock {
+    height: 225px;
+    width: 225px;
   }
 }

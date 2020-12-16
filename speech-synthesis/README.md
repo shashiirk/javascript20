@@ -1,10 +1,10 @@
 # Speech Synthesis
 
-A text-to-speech app built with **Speech** API.
+A text-to-speech app which uses **Speech** API.
 
 ## Project Specifications
 
-- Smooth UI
+- Responsive UI
 - Modified UI for mobile devices
 - Select an available voice
 - Configure voice

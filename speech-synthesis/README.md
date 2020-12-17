@@ -1,6 +1,6 @@
 # Speech Synthesis
 
-A text-to-speech app which uses **Speech** API.
+A text-to-speech app which uses **SpeechSynthesis** API.
 
 ## Project Specifications
 

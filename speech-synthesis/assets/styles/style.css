@@ -93,13 +93,14 @@ label {
 }
 
 .slider::-moz-range-thumb {
-  border: 0;
+   border: 0;
   height: 14px;
   width: 14px;
   border-radius: 50%;
   background: #003366;
   cursor: pointer;
   -webkit-appearance: none;
+  transition: transform 200ms ease-in-out;
 }
 
 .text {

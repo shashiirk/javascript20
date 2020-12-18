@@ -28,7 +28,7 @@ function scrollToBottom() {
 
 // Put recognised speech results in UI
 function populateResult(ev) {
-  // Recognised text content as a whole string
+  // Recognise text content as a whole string
   const transcript = Array.from(ev.results)
     .map((result) => result[0])
     .map((result) => result.transcript)

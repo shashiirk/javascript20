@@ -42,6 +42,7 @@ function populateResult(ev) {
     center.append(p);
     // Each time a new element is added scroll to the bottom
     scrollToBottom();
+    // On first recognition remove the hint text
     if (firstRecognition) {
       hint.remove();
       firstRecognition = false;

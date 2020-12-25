@@ -12,9 +12,6 @@ const controls = document.querySelector('.controls');
 function playPauseMedia() {
   if (video.paused) {
     video.play();
-    setTimeout(function () {
-      controls.classList.add('hide');
-    }, 500);
   } else {
     video.pause();
     controls.classList.remove('hide');
@@ -25,7 +22,7 @@ function playPauseMedia() {
 function toggleControlVisibility(ev) {
   if (ev.type === 'mouseenter') {
     controls.classList.remove('hide');
-  } else {
+  } else if (ev.type === 'mouseleave') {
     if (!video.paused) {
       setTimeout(function () {
         controls.classList.add('hide');
@@ -47,7 +44,12 @@ function updatePlayPauseIcon() {
 
 // Update progress bar and timer
 function updateVideoProgress() {
-  progress.value = (video.currentTime / video.duration) * 100;
+  const progressPercent = (video.currentTime / video.duration) * 100;
+  progress.value = progressPercent;
+
+  // Style for the elapsed time
+  const bg = `linear-gradient(90deg, #ffffff ${progressPercent}%, #808080 ${progressPercent}%)`;
+  progress.style.background = bg;
 
   let minutes = Math.floor(video.currentTime / 60);
   if (minutes < 10) {
@@ -98,9 +100,8 @@ video.addEventListener('ended', resetVideo);
 // Event listener for play icon
 play.addEventListener('click', playPauseMedia);
 
-// Event listeners for progress bar
-progress.addEventListener('click', setVideoProgress);
-progress.addEventListener('change', setVideoProgress);
+// Event listener for progress bar
+progress.addEventListener('input', setVideoProgress);
 
 // Event listener for expand icon
 expand.addEventListener('click', toggleFullScreen);

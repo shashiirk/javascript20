@@ -10,12 +10,12 @@ html {
 
 body {
   font-family: 'Poppins', 'Montserrat', sans-serif;
-  background-color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   -webkit-tap-highlight-color: transparent;
+  background-color: #fcfcfc;
 }
 
 .container {
@@ -32,8 +32,9 @@ body {
 
 .music-container {
   background-color: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  border: 1px #c4c4c4 solid;
   border-radius: 1rem;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
   padding: 1rem 2rem;
   margin-top: 7rem;
   display: flex;
@@ -44,7 +45,8 @@ body {
 
 #cover-box {
   border-radius: 1rem;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+  border: 1px #c4c4c4 solid;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   position: relative;
   bottom: 4rem;
   width: 85%;

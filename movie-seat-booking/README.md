@@ -8,4 +8,4 @@ Movie seat booking illustration used to select seats for a movie and buy tickets
 - Select or deselect seats
 - Unavailable seats cannot be selected
 - Ticket price updates as seats are selected
-- Selected seats data is stored in localStorage
+- Selected seats' data is stored in localStorage

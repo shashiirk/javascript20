@@ -1,0 +1,269 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header {
+  border-bottom: 1px #dde5ed solid;
+  width: 100%;
+  overflow: hidden;
+}
+
+.title {
+  background-color: #002e6e;
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 600;
+  padding: 1.6rem 0.2rem;
+  text-align: center;
+}
+
+.show-case {
+  background-color: #f4f7f9;
+  font-size: 1.2rem;
+  padding: 1.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.show-case .hint {
+  margin: 0 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-case .hint .hint-seat {
+  border: 1px #e0e2e4 solid;
+  border-radius: 2px;
+  background-color: #fff;
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0.8rem 0.6rem 0.8rem 0;
+}
+
+.show-case .hint .hint-seat.selected {
+  background-color: #00aced;
+}
+
+.show-case .hint .hint-seat.unavailable {
+  background-color: #dde5ed;
+  position: relative;
+}
+
+.show-case .hint .hint-seat.unavailable::after {
+  content: '';
+  background-color: #a4a4a4;
+  width: 0.1rem;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  transform: rotate(45deg);
+  transform-origin: top;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen {
+  padding: 2rem 0.2rem 1.8rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen img {
+  display: block;
+  width: 30rem;
+}
+
+.screen .screen-text {
+  color: #506d85;
+}
+
+.seats .classic-seats {
+  padding: 1rem;
+}
+
+.seats .recliner-seats {
+  padding: 2rem 1rem 1rem;
+}
+
+.seats .row {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.seats .row .code {
+  color: #8ba6c1;
+  font-size: 1.4rem;
+  width: 4rem;
+}
+
+.seats .row div:nth-of-type(4) {
+  margin-left: auto;
+}
+
+.seats .seat {
+  border: 1px #8ba6c1 solid;
+  border-radius: 2px;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  transition: all 250ms ease-in;
+}
+
+.seats .seat.selected {
+  background-color: #00aced;
+  border-color: #00aced;
+}
+
+.seats .seat.unavailable {
+  background-color: #dde5ed;
+  position: relative;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.seats .seat.unavailable::after {
+  content: '';
+  background-color: #a4a4a4;
+  width: 0.1rem;
+  height: 2.8rem;
+  position: absolute;
+  right: 0;
+  transform: rotate(45deg);
+  transform-origin: top;
+}
+
+.seats .seats-type {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.2rem;
+  text-align: center;
+}
+
+.seats .seats-type .fas {
+  color: black;
+  font-size: 1.1rem;
+  margin: 0 0.1rem 0 0.2rem;
+}
+
+.footer {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+
+.footer.visible {
+  display: flex;
+}
+
+.footer .info {
+  margin-right: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer .info .final {
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.footer .info .final .fas {
+  font-size: 1.4rem;
+  margin-right: 0.1rem;
+}
+
+.footer .info .total {
+  font-size: 1.3rem;
+  color: #506d85;
+}
+
+.footer .info .total .fas {
+  font-size: 1.1rem;
+  margin-right: 0.1rem;
+}
+
+.footer .continue {
+  background-color: #00aced;
+  color: #fff;
+  font: inherit;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1.5rem 3rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  body::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+
+  body::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #8ba6c1;
+  }
+
+  .seats .seat:not(.unavailable):hover {
+    background-color: #00aced;
+    border-color: #00aced;
+  }
+
+  .seats .seat:not(.unavailable):active {
+    transition-duration: 0ms;
+    background-color: #6dbadb;
+    border-color: #00aced;
+  }
+}
+
+@media (max-width: 450px) {
+  .screen {
+    padding: 1rem;
+  }
+
+  .seats .row .code {
+    width: 2rem;
+  }
+
+  .footer {
+    justify-content: space-between;
+  }
+
+  .footer .info {
+    margin: 1rem;
+  }
+}

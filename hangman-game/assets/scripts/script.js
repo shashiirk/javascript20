@@ -1,3 +1,5 @@
+import getWord from './words.js';
+
 const word = document.getElementById('word');
 const incorrect = document.getElementById('incorrect');
 const incorrectLettersEl = document.querySelector('#incorrect p');
@@ -7,30 +9,6 @@ const msgInfo = document.getElementById('msg-info');
 const playBtn = document.getElementById('play');
 const indication = document.getElementById('indication');
 const bodyParts = document.getElementsByClassName('body-part');
-
-// List of words
-const wordList = [
-  'market',
-  'knock',
-  'smite',
-  'windy',
-  'coin',
-  'throw',
-  'silence',
-  'bluff',
-  'downfall',
-  'climb',
-  'lying',
-  'weaver',
-  'snob',
-  'kickoff',
-  'match',
-  'coat',
-  'emerald',
-  'coherent',
-  'multiple',
-  'square',
-];
 
 // Word that is selected to play
 let selectedWord = null;
@@ -43,7 +21,7 @@ const incorrectLetters = [];
 
 // Select a word randomly from wordList and initialize in the DOM
 function initializeWord() {
-  selectedWord = wordList[Math.floor(Math.random() * wordList.length)];
+  selectedWord = getWord();
   const noOfLetters = selectedWord.length;
   for (let i = 0; i < noOfLetters; i++) {
     const listItem = document.createElement('li');

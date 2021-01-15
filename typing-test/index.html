@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Typing Test</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1 class="first">TYPING SPEED TEST</h1>
+        <h1 class="second">Test your typing skills</h1>
+      </div>
+      <div class="control">
+        <label for="difficulty">Difficulty: </label>
+        <select id="difficulty" class="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="values">
+        <div class="timer">
+          <p id="time" class="time">10</p>
+          seconds
+        </div>
+        <div class="score-board">
+          <p id="score" class="score">0</p>
+          score
+        </div>
+      </div>
+      <div class="word-block">
+        <p class="word-title">Word:</p>
+        <p id="word" class="word"></p>
+      </div>
+      <div class="input-block">
+        <input
+          id="input"
+          class="input"
+          type="text"
+          placeholder="Start typing"
+          autocomplete="off"
+          autofocus
+        />
+      </div>
+    </div>
+    <div class="end-container">
+      <div class="end">
+        <p class="content">
+          Nice try! Your score is
+          <span id="final-score" class="final-score">0</span>
+        </p>
+        <button id="play" class="play">Try again</button>
+      </div>
+    </div>
+    <script type="module" src="assets/scripts/script.js"></script>
+  </body>
+</html>

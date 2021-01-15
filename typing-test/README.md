@@ -9,3 +9,4 @@ A game in which the player is supposed to type the words correctly until the tim
 - Implement count down timer
 - Increment time for each correctly typed word
 - Show final score when the game is up
+- Stores difficulty setting in local storage

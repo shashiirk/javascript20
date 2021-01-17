@@ -2,7 +2,7 @@
 
 Find the word by selecting a letter each time. You win if you find the word in certain amount of chances.
 
-# Project Specifications
+## Project Specifications
 
 - Build hangman image with SVG
 - Pick a random word

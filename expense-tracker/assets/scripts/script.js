@@ -340,6 +340,11 @@ function validateAmount(amountValue) {
   return parseInt(amountValue) >= 0;
 }
 
+// Scroll to the bottom of the page when a new item is added
+function scrollToBottom(element) {
+  element.scrollTop = element.scrollHeight;
+}
+
 // Read form input fields and append the item
 function submitItem(ev) {
   // Prevent the default behaviour of form submission
@@ -374,6 +379,9 @@ function submitItem(ev) {
     // Get previous element and append item to it
     const previousElement = ev.target.previousElementSibling;
     previousElement.append(li);
+
+    // Scroll to the bottom
+    scrollToBottom(previousElement);
 
     // Update items in All section
     updateAllItems();
@@ -413,7 +421,11 @@ function submitItem(ev) {
 // On load
 fetchFromLocalStorage();
 
+// Listen to submit event on incomeForm
 incomeForm.addEventListener('submit', submitItem);
+// Listen to submit event on expenseForm
 expenseForm.addEventListener('submit', submitItem);
+// Listen to click event on dbMenu
 dbMenu.addEventListener('click', toggleMenuItems);
+// Listen to click event on dashboard
 dashboard.addEventListener('click', updateItem);

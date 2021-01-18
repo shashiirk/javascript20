@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-board">
+        <h1 class="main-title">Expense Tracker</h1>
+        <div class="balance">
+          <h2 class="balance-title">Balance</h2>
+          <p class="balance-amount">
+            <i class="rupee fas fa-rupee-sign"></i
+            ><span id="balance-amt">0</span>
+          </p>
+        </div>
+        <div class="income-expense">
+          <div class="income">
+            <h2 class="income-title">Income</h2>
+            <p class="income-amount">
+              <i class="rupee fas fa-rupee-sign"></i
+              ><span id="income-amt">0</span>
+            </p>
+          </div>
+          <div class="expense">
+            <h2 class="expense-title">Expense</h2>
+            <p class="expense-amount">
+              <i class="rupee fas fa-rupee-sign"></i
+              ><span id="expense-amt">0</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard">
+        <div class="legend">
+          <h1 class="db-title">Dashboard</h1>
+          <div class="db-menu">
+            <div class="db-income-title show">Income</div>
+            <div class="db-expense-title">Expense</div>
+            <div class="db-all-title">All</div>
+          </div>
+        </div>
+        <div class="db-income show">
+          <ul class="db-income-items"></ul>
+          <form id="db-income-form" class="form">
+            <div class="form-control">
+              <input type="text" class="input-title" placeholder="Title" />
+              <span class="hint">Provide a valid title</span>
+            </div>
+            <div class="form-control">
+              <input type="number" class="input-amount" placeholder="Amount" />
+              <span class="hint">Provide a valid amount</span>
+            </div>
+            <button type="submit">
+              <i class="fas fa-plus"></i>
+            </button>
+          </form>
+        </div>
+        <div class="db-expense">
+          <ul class="db-expense-items"></ul>
+          <form id="db-expense-form" class="form">
+            <div class="form-control">
+              <input type="text" class="input-title" placeholder="Title" />
+              <span class="hint">Provide a valid title</span>
+            </div>
+            <div class="form-control">
+              <input type="number" class="input-amount" placeholder="Amount" />
+              <span class="hint">Provide a valid amount</span>
+            </div>
+            <button type="submit">
+              <i class="fas fa-plus"></i>
+            </button>
+          </form>
+        </div>
+        <div class="db-all">
+          <ul class="db-all-items"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,368 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background: #000428;
+  background: -webkit-linear-gradient(to bottom, #004e92, #000428);
+  background: linear-gradient(to bottom, #004e92, #000428);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  background-color: #fff;
+  padding: 1rem;
+  margin: auto;
+  max-width: 40rem;
+  width: 95%;
+  border-radius: 6px;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.balance {
+  background: #000428;
+  color: #fff;
+  max-width: 35%;
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.balance-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.balance-amount {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.balance-amount .rupee {
+  font-size: 1.74rem;
+  padding-right: 0.4rem;
+}
+
+.income-expense {
+  background-color: #000428;
+  color: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.income,
+.expense {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.income-title,
+.expense-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.income-amount,
+.expense-amount {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.income-amount .rupee,
+.expense-amount .rupee {
+  font-size: 1.4rem;
+  padding-right: 0.4rem;
+}
+
+.dashboard {
+  padding: 1rem 1rem 0;
+}
+
+.db-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.db-menu {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #808080;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.db-menu * {
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+.db-income-title.show,
+.db-expense-title.show,
+.db-all-title.show {
+  background-color: #d2d2de;
+  color: #000428;
+}
+
+.db-menu .db-expense-title {
+  margin: 0 1rem;
+}
+
+.db-income,
+.db-expense,
+.db-all {
+  border-top: 1px #808080 solid;
+  padding-top: 1rem;
+  height: 24rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+
+.db-income.show,
+.db-expense.show,
+.db-all.show {
+  display: flex;
+}
+
+.db-income-items,
+.db-expense-items,
+.db-all-items {
+  list-style-type: none;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #404040;
+  overflow-y: auto;
+}
+
+.db-income-items::-webkit-scrollbar-track,
+.db-expense-items::-webkit-scrollbar-track,
+.db-all-items::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: #808080;
+}
+
+.db-income-items::-webkit-scrollbar,
+.db-expense-items::-webkit-scrollbar,
+.db-all-items::-webkit-scrollbar {
+  width: 3px;
+  background-color: transparent;
+}
+
+.db-income-items::-webkit-scrollbar-thumb,
+.db-expense-items::-webkit-scrollbar-thumb,
+.db-all-items::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #000428;
+}
+
+.db-item {
+  padding: 0.4rem 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.db-income-items .db-item {
+  color: #148814;
+}
+
+.db-expense-items .db-item {
+  color: #ec2222;
+}
+
+.db-item .rupee {
+  font-size: 1.15rem;
+  margin-left: 0.4rem;
+}
+
+.db-item .icons {
+  display: flex;
+  margin: 0 1rem;
+}
+
+.db-item .edit,
+.db-item .delete {
+  color: #000428;
+  display: inline-block;
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.db-all-items .edit {
+  display: none;
+}
+
+.edit:active,
+.delete:active {
+  background-color: #d4d4d4;
+}
+
+.form {
+  padding: 1rem 0 0.2rem;
+  display: flex;
+}
+
+.form .form-control {
+  width: 45%;
+}
+
+.form div:nth-child(2) {
+  margin: 0 1rem;
+}
+
+.form input {
+  display: block;
+  font: inherit;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  width: 100%;
+  border: none;
+  border-bottom: 2px #a0a0a0 solid;
+  outline: none;
+}
+
+.form input::placeholder {
+  color: #808080;
+}
+
+.form input::-webkit-outer-spin-button,
+.form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.form button {
+  background-color: #000428;
+  color: #fff;
+  display: block;
+  font: inherit;
+  font-size: 1.8rem;
+  height: fit-content;
+  padding: 0.4rem;
+  width: 10%;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.form button:active {
+  background-color: #004e92;
+}
+
+.form-control .hint {
+  color: #ec2222;
+  font-weight: 600;
+  margin-left: 0.4rem;
+  visibility: hidden;
+}
+
+.form-control.error input {
+  border-color: #ec2222;
+}
+
+.form-control.error .hint {
+  visibility: visible;
+}
+
+@media (max-width: 425px) {
+  body {
+    height: 100vh;
+    background: none;
+  }
+
+  .container {
+    background-color: #004e92;
+    padding: 0;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-board {
+    color: #fff;
+    height: fit-content;
+    padding: 1rem;
+  }
+
+  .main-title {
+    margin-bottom: 0.4rem;
+  }
+
+  .dashboard {
+    background-color: #fff;
+    flex-grow: 1;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem 1rem;
+  }
+
+  .db-menu {
+    margin-bottom: 0.6rem;
+  }
+
+  .db-income,
+  .db-expense,
+  .db-all {
+    height: 0;
+    flex-grow: 1;
+  }
+
+  .db-item {
+    font-size: 1.6rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .db-item .rupee {
+    font-size: 1.38rem;
+  }
+
+  .form button {
+    width: 14%;
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Bookmarker</title>
+  </head>
+  <body>
+    <div class="container">
+      <button class="add-bookmark-btn">Add Bookmark</button>
+      <div class="bookmarks"></div>
+    </div>
+    <div class="add-bookmark-container">
+      <div class="add-bookmark">
+        <h1 class="title">Add Bookmark</h1>
+        <form class="form">
+          <div class="form-control">
+            <input type="text" id="website-name" placeholder="Website Name" />
+            <small class="hint">Please enter a valid name</small>
+          </div>
+          <div class="form-control">
+            <input type="text" id="website-url" placeholder="Website URL" />
+            <small class="hint">Please enter a valid URL</small>
+          </div>
+          <button class="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>

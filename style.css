@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  background-color: #141d26;
+  color: #fff;
+}
+
+.container {
+  /* border: 1px red solid; */
+  max-width: 1200px;
+  width: 100%;
+  padding: 14px;
+  margin: auto;
+}
+
+.container .hero {
+  /* border: 1px green solid; */
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .hero .image {
+  background-color: #f6c90e;
+  color: #141d26;
+  height: 280px;
+  width: 280px;
+  padding: 32px;
+  margin: 24px 0;
+  overflow: hidden;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container .hero .image > div {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container .hero .image .char {
+  /* Make text unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 108px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+
+.container .hero .info {
+  text-align: center;
+  font-size: 32px;
+  margin: 24px 0;
+}
+
+.container .hero .link {
+  border: 1px white solid;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px;
+  margin: 14px 0;
+  display: flex;
+  align-items: center;
+}
+
+.container .hero .link .git {
+  margin-right: 12px;
+}

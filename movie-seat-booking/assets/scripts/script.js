@@ -45,7 +45,7 @@ function updateAmount() {
   }
 }
 
-// Keeps track of selected items in local storage
+// Keeps track of selected items in localStorage
 function updateStore() {
   const selectedSeats = document.querySelectorAll('.seats .seat.selected');
   // Get indexes of all selected seats
@@ -53,8 +53,13 @@ function updateStore() {
     [...allSeats].indexOf(value)
   );
 
-  // Add item to local storage
-  localStorage.setItem('selectedSeats', JSON.stringify(selectedSeatsIndexes));
+  if (selectedSeatsIndexes.length > 0) {
+    // Add item to localStorage
+    localStorage.setItem('selectedSeats', JSON.stringify(selectedSeatsIndexes));
+  } else {
+    // Remove item from localStorage
+    localStorage.removeItem('selectedSeats');
+  }
 }
 
 // Selects and deselects seats
@@ -84,9 +89,6 @@ function seatHandler(ev) {
           );
           currentSelectSeatType =
             ev.target.parentElement.parentElement.className;
-
-          // Empty the local storage
-          localStorage.clear();
         }
       }
     }

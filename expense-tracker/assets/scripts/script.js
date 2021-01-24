@@ -155,8 +155,9 @@ function updateAllItems() {
 
 // Add Income and Expense items to localStorage
 function updateLocalStorage() {
-  // Clear previously added items
-  localStorage.clear();
+  // Remove previously added items
+  localStorage.removeItem('income');
+  localStorage.removeItem('expense');
 
   // Add Income items to localStorage
   const incomeListItems = incomeItems.querySelectorAll('.db-item');
@@ -401,6 +402,10 @@ function submitItem(ev) {
     // Clear form input fields
     title.value = '';
     amount.value = '';
+
+    // Remove focus on input fields
+    ev.target.querySelector('.input-title').blur();
+    ev.target.querySelector('.input-amount').blur();
   } else {
     // If title field is empty
     if (titleValue === '') {

@@ -85,10 +85,10 @@ function updateBookmarks() {
 
 // Store bookmark items in the localStorage
 function updateLocalStorage() {
-  if (bookmarksList.length !== 0) {
+  if (bookmarksList.length > 0) {
     localStorage.setItem('bookmarks', JSON.stringify(bookmarksList));
   } else {
-    localStorage.clear();
+    localStorage.removeItem('bookmarks');
   }
 }
 
@@ -158,7 +158,6 @@ function validateForm() {
     } else {
       websiteUrl.parentElement.classList.remove('error');
     }
-
     return false;
   } else {
     websiteName.parentElement.classList.remove('error');
@@ -177,7 +176,6 @@ function submitEntry(ev) {
   if (isValid) {
     // Store the bookmark
     storeBookmark();
-
     // Hide the form
     hideForm();
   }

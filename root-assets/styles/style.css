@@ -89,7 +89,6 @@ body {
   padding: 14px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* gap: 14px; */
 }
 
 .container .projects .project {
@@ -103,7 +102,7 @@ body {
 }
 
 .container .projects .project .info {
-  background-color: rgba(12, 17, 22, 0.85);
+  background-color: rgba(12, 17, 22, 0.95);
   position: absolute;
   top: 0;
   left: 0;
@@ -115,16 +114,19 @@ body {
   align-items: center;
   overflow: hidden;
   opacity: 0;
+  transition: opacity 300ms ease-in;
 }
 
 .container .projects .project .info .title {
   font-size: 24px;
   font-weight: 500;
   transform: translateY(-300%);
+  transition: transform 300ms ease;
 }
 
 .container .projects .project .info .link {
   transform: translateY(300%);
+  transition: transform 300ms ease;
 }
 
 .container .projects .project .info a {
@@ -167,15 +169,6 @@ body {
     box-shadow: 0 0 10px #f6c90e;
   }
 
-  .container .projects .project .info {
-    transition: opacity 300ms ease-in;
-  }
-
-  .container .projects .project .info .title,
-  .container .projects .project .info .link {
-    transition: transform 300ms ease;
-  }
-
   .container .projects .project:hover .info .title,
   .container .projects .project:hover .info .link {
     transform: translateY(0);
@@ -204,7 +197,123 @@ body {
     background-color: #424a51;
   }
 
+  .container .projects .project:hover .info {
+    opacity: 1;
+  }
+
+  .container .projects .project:hover .info .title,
+  .container .projects .project:hover .info .link {
+    transform: translateY(0);
+  }
+
+  .container .projects .project .info a:active {
+    background-color: #f6c90e;
+    color: #0c1116;
+  }
+
   .footer .link:active {
     text-decoration: underline #f6c90e 1px solid;
+  }
+}
+
+@media (max-width: 800px) {
+  .container .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .container .hero .image {
+    width: 240px;
+    height: 240px;
+  }
+
+  .container .hero .image .char {
+    font-size: 96px;
+  }
+
+  .container .projects .project .info .title {
+    font-size: 20px;
+  }
+
+  .container .projects .project .info a {
+    margin-top: 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container .hero .image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .container .hero .image .char {
+    font-size: 84px;
+  }
+
+  .container .hero .info {
+    font-size: 28px;
+  }
+
+  .container .hero .link {
+    padding: 10px;
+  }
+
+  .container .projects .project .info a {
+    margin-top: 14px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container .hero .image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .container .hero .image .char {
+    font-size: 72px;
+  }
+
+  .container .hero .info {
+    font-size: 24px;
+  }
+
+  .container .hero .link {
+    padding: 12px;
+  }
+
+  .container .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container .projects .project .info .title {
+    font-size: 24px;
+  }
+
+  .container .projects .project .info a {
+    margin-top: 28px;
+    padding: 8px 28px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container .hero .image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .container .hero .image .char {
+    font-size: 64px;
+  }
+
+  .container .hero .info {
+    font-size: 20px;
+  }
+
+  .container .hero .link {
+    padding: 10px;
   }
 }

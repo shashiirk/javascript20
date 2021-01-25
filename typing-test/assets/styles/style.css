@@ -49,6 +49,7 @@ body {
 }
 
 .control .difficulty {
+  background-color: #fff;
   font: inherit;
   padding: 0.8rem;
   border: none;

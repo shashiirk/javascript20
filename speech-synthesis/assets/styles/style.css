@@ -238,5 +238,6 @@ button {
 
   .text {
     flex-grow: 1;
+    min-height: 40px;
   }
 }

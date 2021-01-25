@@ -29,7 +29,7 @@ let gameStarted = false;
 // Display the word in the document
 function displayWord() {
   // Gets a random word
-  word = getWord();
+  word = getWord().toLowerCase();
   wordEl.innerText = word;
 }
 
@@ -102,7 +102,7 @@ function inputHandler() {
     gameStarted = true;
   }
 
-  const inputWord = inputEl.value;
+  const inputWord = inputEl.value.toLowerCase();
 
   // If the word entered by user is correct
   if (inputWord === word) {

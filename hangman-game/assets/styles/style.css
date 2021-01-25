@@ -136,7 +136,7 @@ body {
   width: 75%;
   height: 15rem;
   padding: 2rem;
-  line-height: 1.6;
+  line-height: 1.5;
   margin: auto;
   background-color: #c532e2;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
@@ -148,7 +148,7 @@ body {
 }
 
 .no-work p {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .final-msg {
@@ -240,6 +240,10 @@ body {
 }
 
 @media (hover: none) {
+  body {
+    overflow: hidden;
+  }
+
   .backdrop {
     display: block;
   }

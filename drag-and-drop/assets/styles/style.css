@@ -32,7 +32,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  width: 100vw;
+  width: 100%;
   text-align: center;
   overflow-x: hidden;
 }
@@ -114,8 +114,53 @@ li.drag-over {
   transition: background 200ms ease-in-out;
 }
 
+.no-work-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  display: flex;
+  display: none;
+}
+
+.no-work {
+  background-color: green;
+  color: #fff;
+  font-size: 1.6rem;
+  max-width: 40rem;
+  width: 75%;
+  height: 15rem;
+  padding: 2rem;
+  margin: auto;
+  z-index: 100;
+  line-height: 1.5;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (hover: hover) {
   .btn:hover {
     background-color: var(--button-hover-bg-color);
+  }
+}
+
+@media (hover: none) {
+  body {
+    overflow: hidden;
+  }
+
+  .no-work-container {
+    display: flex;
   }
 }

@@ -23,7 +23,7 @@
 | 17   | Recipe Search      | [Launch](https://shashiirk.github.io/javascript20/recipe-search)      |
 | 18   | Typing Test        | [Launch](https://shashiirk.github.io/javascript20/typing-test)        |
 | 19   | Video Player       | [Launch](https://shashiirk.github.io/javascript20/video-player)       |
-| 20   |                    |                                                                       |
+| 20   | Breakout Game      | [Launch](https://shashiirk.github.io/javascript20/breakout-game)      |
 
 ## Credits
 

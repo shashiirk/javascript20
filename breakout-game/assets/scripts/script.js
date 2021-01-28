@@ -91,6 +91,16 @@ function drawPaddle() {
   ctx.closePath();
 }
 
+// Get high score from localStorage if possible and put it in document
+function fetchHighScoreFromLocalStorage() {
+  highScore =
+    localStorage.getItem('highScore') !== null
+      ? localStorage.getItem('highScore')
+      : 0;
+
+  highContent.innerText = highScore;
+}
+
 // Regenerate all the bricks when ball collides the bottom boundary
 function regenerateBricks() {
   bricks.forEach((row) => {
@@ -113,7 +123,13 @@ function draw() {
 // Update the score board values in the document
 function updateScoreBoard() {
   scoreContent.innerText = currentScore;
-
+  // Check if currentScore is the highScore
+  if (currentScore > highScore) {
+    highScore = currentScore;
+    localStorage.setItem('highScore', highScore);
+    highContent.innerText = highScore;
+  }
+  // Win condition
   if (currentScore === brickRows * brickColumns) {
     // Show modal
     endContainer.classList.add('show');
@@ -132,6 +148,10 @@ function resetGame() {
   paddle.y = canvas.height - 20;
   // Reset scoreboard
   currentScore = 0;
+  scoreContent.innerText = currentScore;
+  highScore = 0;
+  highContent.innerText = highScore;
+  localStorage.setItem('highScore', highScore);
   // Remove animation frame
   pauseGame = true;
 }
@@ -235,6 +255,7 @@ function startBtnHandler() {
   // Hide modal
   startContainer.classList.add('hide');
   update();
+  fetchHighScoreFromLocalStorage();
 }
 
 // Restart a new game when playBtn clicked

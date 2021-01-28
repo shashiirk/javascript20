@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../root-assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../root-assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../root-assets/images/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="../root-assets/images/favicon/site.webmanifest"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Breakout Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Breakout Game</h1>
+      <div class="score-cards">
+        <div class="high">
+          <p>High Score:</p>
+          <span id="high-content">0</span>
+        </div>
+        <div class="score">
+          <p>Score:</p>
+          <span id="score-content">0</span>
+        </div>
+      </div>
+      <canvas id="canvas" class="canvas" width="770" height="450"></canvas>
+    </div>
+    <div class="start-container">
+      <div class="start">
+        <p>
+          Use your right and left keys to move the paddle to bounce the ball up
+          and break the blocks. If you miss the ball, your score and the blocks
+          will reset.
+        </p>
+        <button id="start-btn" class="start-btn">Start Game</button>
+      </div>
+    </div>
+    <div class="end-container">
+      <div class="end">
+        <p>Hurray! You won.</p>
+        <button id="play" class="play">Play Again</button>
+      </div>
+    </div>
+    <div class="no-work-container">
+      <div class="no-work">
+        <p>Sorry! This application doesn't work in touch screen devices.</p>
+      </div>
+    </div>
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>

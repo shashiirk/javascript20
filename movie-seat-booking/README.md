@@ -9,3 +9,7 @@ Movie seat booking illustration used to select seats for a movie and buy tickets
 - Unavailable seats cannot be selected
 - Ticket price updates as seats are selected
 - Selected seats' data is stored in localStorage
+
+## Credits
+
+Design inspiration from [Paytm Movies](https://paytm.com/movies).

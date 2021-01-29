@@ -9,3 +9,7 @@ Keep track of income and expenses using this simple application.
 - Shows all items at one place
 - Edit/Delete item
 - Items are saved in localStorage
+
+## Credits
+
+Inspired from [this](https://youtu.be/SQbCwfGC7EM) YouTube video.

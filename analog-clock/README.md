@@ -7,3 +7,7 @@ Displays analog clock built using JavaScript **Date** object and **setInterval()
 - Smooth UI
 - Hour hand, Minute hand and Second hand
 - Update angular position of hands according to current time
+
+## Credits
+
+Inspired by [this](https://youtu.be/Ki0XXrlKlHY) YouTube video.

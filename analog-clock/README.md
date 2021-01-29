@@ -10,4 +10,4 @@ Displays analog clock built using JavaScript **Date** object and **setInterval()
 
 ## Credits
 
-Inspired by [this](https://youtu.be/Ki0XXrlKlHY) YouTube video.
+Inspired from [this](https://youtu.be/Ki0XXrlKlHY) YouTube video.

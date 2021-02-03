@@ -141,6 +141,7 @@ body {
   font-size: 1.6rem;
   font-weight: 600;
   margin-right: 2rem;
+  margin-bottom: 2rem;
   color: #fff;
   background: #ee0979;
   background: -webkit-linear-gradient(to right, #ee0979, #ff6a00);
@@ -434,5 +435,15 @@ body {
 
   .signup-section .signup-form input {
     width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 54%;
+  }
+
+  .main {
+    padding: 10rem 1rem;
   }
 }

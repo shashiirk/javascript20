@@ -183,7 +183,7 @@ body {
 }
 
 .footer .info {
-  margin-right: 10rem;
+  margin: 0 8rem 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -217,7 +217,7 @@ body {
   font: inherit;
   font-size: 1.6rem;
   font-weight: 600;
-  padding: 1.5rem 3rem;
+  padding: 1.4rem 2.8rem;
   border-radius: 0.3rem;
   border: none;
   outline: none;

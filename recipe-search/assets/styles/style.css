@@ -130,7 +130,7 @@ body.no-scroll {
 }
 
 .item {
-  border: 1px var(--tertiary-gray-color) solid;
+  border: 1px var(--quaternary-gray-color) solid;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -182,7 +182,7 @@ body.no-scroll {
   max-width: 100rem;
   max-height: 95%;
   width: 75%;
-  padding: 2rem;
+  padding: 2rem 3rem 3rem;
   margin: auto;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);

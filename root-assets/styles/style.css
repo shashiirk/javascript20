@@ -14,15 +14,14 @@ body {
 .container {
   max-width: 1200px;
   width: 100%;
-  padding: 14px;
+  padding: 16px;
   margin: auto;
   overflow: hidden;
 }
 
 .container .hero {
   width: 100%;
-  padding: 14px;
-  margin: 32px 0;
+  margin: 16px 0 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +30,7 @@ body {
 
 .container .hero img {
   display: block;
-  margin-bottom: 46px;
+  margin-bottom: 32px;
 }
 
 .container .hero .info {
@@ -40,8 +39,7 @@ body {
 }
 
 .container .projects {
-  margin: 14px 0;
-  padding: 14px;
+  margin-bottom: 16px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }

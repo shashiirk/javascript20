@@ -196,10 +196,6 @@ body {
 }
 
 @media (max-width: 500px) {
-  .container {
-    padding: 0;
-  }
-
   .container .hero img {
     width: 200px;
     height: 200px;

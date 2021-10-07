@@ -22,6 +22,7 @@ body {
 .container .hero {
   width: 100%;
   padding: 14px;
+  margin: 32px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,27 +31,12 @@ body {
 
 .container .hero img {
   display: block;
-  margin: 24px 0;
+  margin-bottom: 46px;
 }
 
 .container .hero .info {
   text-align: center;
   font-size: 32px;
-  margin: 24px 0;
-}
-
-.container .hero .link {
-  border: 1px #f6c90e solid;
-  color: #f6c90e;
-  text-decoration: none;
-  padding: 14px;
-  margin: 14px 0;
-  display: flex;
-  align-items: center;
-}
-
-.container .hero .link .git {
-  margin-right: 12px;
 }
 
 .container .projects {
@@ -130,14 +116,6 @@ body {
 }
 
 @media (hover: hover) {
-  .container .hero .link {
-    transition: box-shadow 240ms ease;
-  }
-
-  .container .hero .link:hover {
-    box-shadow: 0 0 10px #f6c90e;
-  }
-
   .container .projects .project:hover .info .title,
   .container .projects .project:hover .info .link {
     transform: translateY(0);
@@ -162,10 +140,6 @@ body {
 }
 
 @media (hover: none) {
-  .container .hero .link:active {
-    background-color: #424a51;
-  }
-
   .container .projects .project:hover .info {
     opacity: 1;
   }
@@ -217,10 +191,6 @@ body {
     font-size: 28px;
   }
 
-  .container .hero .link {
-    padding: 10px;
-  }
-
   .container .projects .project .info a {
     margin-top: 14px;
     padding: 8px 14px;
@@ -239,10 +209,6 @@ body {
 
   .container .hero .info {
     font-size: 24px;
-  }
-
-  .container .hero .link {
-    padding: 12px;
   }
 
   .container .projects {
@@ -268,9 +234,5 @@ body {
 
   .container .hero .info {
     font-size: 20px;
-  }
-
-  .container .hero .link {
-    padding: 10px;
   }
 }

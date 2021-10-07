@@ -1,6 +1,17 @@
-# JavaScript20
+<p align="center">
+  <a href="https://shashiirk.github.io/javascript20">
+    <img alt="logo" src="root-assets/favicon/logo.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  JavaScript20
+</h1>
+
+## Description
 
 20 projects built with plain HTML, CSS and JavaScript. No libraries, compilers or frameworks were used.
+
+## Projects
 
 | S No | Project            | Launch                                                                |
 | ---- | ------------------ | --------------------------------------------------------------------- |
@@ -25,6 +36,14 @@
 | 19   | Video Player       | [Launch](https://shashiirk.github.io/javascript20/video-player)       |
 | 20   | Breakout Game      | [Launch](https://shashiirk.github.io/javascript20/breakout-game)      |
 
+## Live Demo
+
+See it live [here](https://shashiirk.github.io/javascript20).
+
 ## Credits
 
 Source of inspiration from [vanillawebprojects.com](https://vanillawebprojects.com).
+
+## Licence
+
+This project is licensed under [MIT](LICENSE).
